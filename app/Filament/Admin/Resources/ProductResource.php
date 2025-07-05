@@ -46,7 +46,8 @@ class ProductResource extends Resource
         return $table
             ->columns([
     Tables\Columns\TextColumn::make('id')
-        ->sortable()
+            ->rowIndex()
+            ->sortable()
         ->searchable(),
 
     Tables\Columns\TextColumn::make('name')
